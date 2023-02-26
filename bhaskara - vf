@@ -1,0 +1,122 @@
+print("")
+
+print("Este programa ira calcular bhaskara.")
+print("Voce deve inserir os valoes diferentes de x, sendo ax²+bx+c ")
+print("")
+print("(Os valores são arredondados na casa dos milésimos)")
+a = int(input("Coloque o valor de a:"))
+b = int(input("Coloque o valor de b:"))
+c = int(input("Coloque o valor de c:"))
+print('-='*15)
+if a == 0:
+    print("não existe função do segundo grau, pois o coeficiente angular é igual a 0")
+    print('-=' * 15)
+    RR = -c / b
+
+    print(" A resolução da equação do primeiro grau é {}".format(RR))
+
+else:
+    if a == 1:
+
+        if b == 1:
+            if c > 0:
+                print("x² + x +", c, "= 0")
+
+            elif c < 0:
+                print("x² + x", c, "= 0")
+
+            elif c == 0:
+                print("x² + x = 0")
+
+        elif b > 0 and b != 1:
+            if c > 0:
+                print("x² +", b, "x +", c, "= 0")
+
+            elif c < 0:
+                print("x² +", b, "x", c, "= 0")
+
+            elif c == 0:
+                print("x² +", b, "x = 0")
+
+        elif b < 0:
+            if c > 0:
+                print("x²", b, "x +", c, "= 0")
+
+            elif c < 0:
+                print("x²", b, "x", c, "= 0")
+
+            elif c == 0:
+                print("x²", b, "x = 0")
+
+        elif b == 0:
+            if c > 0:
+                print("x² +", c, "= 0")
+
+            elif c < 0:
+                print("x²", c, "= 0")
+
+            elif c == 0:
+                print("x² = 0")
+
+    else:
+        if b == 1:
+            if c > 0:
+                print(a, "x² + x +", c, "= 0")
+
+            elif c < 0:
+                print(a, "x² + x", c, "= 0")
+
+            elif c == 0:
+                print(a, "x² + x = 0")
+
+
+        elif b > 0 and b != 1:
+            if c > 0:
+                print(a, "x² +", b, "x +", c, "= 0")
+
+            elif c < 0:
+                print(a, "x² +", b, "x", c, "= 0")
+
+            elif c == 0:
+                print(a, "x² +", b, "x = 0")
+
+
+        elif b < 0:
+            if c > 0:
+                print(a, "x²", b, "x +", c, "=0")
+
+            elif c < 0:
+                print(a, "x²", b, "x", c, "=0")
+
+            elif c == 0:
+                print(a, "x²", b, "x = 0")
+
+
+        elif b == 0:
+            if c > 0:
+                print(a, "x² +", c, "= 0")
+
+            elif c < 0:
+                print(a, "x²", c, "= 0")
+
+
+            elif c == 0:
+                print(a, "x² = 0")
+    print('-=' * 15)
+    D = (b ** 2) + ((-4) * a * c)
+    E = (D ** 0.5)
+    BN = (-b - E) / (2 * a)
+    BP = (-b + E) / (2 * a)
+
+    if D < 0:
+
+        print("não existem raízes reais")
+
+    elif D > 0:
+
+        print("As raízes reais são diferentes e iguais a: {:.3f} e {:.3f}".format(BP, BN))
+
+    elif D == 0:
+
+        x1 = ((BN * 1000) // 1) / 1000
+        print("As raízes reais são iguais a: {}".format(BP))
